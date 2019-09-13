@@ -96,7 +96,24 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
+        # Bubble sort
+        # TODO set is_unsorted to True.
+        # TODO while is_unsorted is True continue sorting:
+            # TODO set did_swap to False.
+            # TODO while robot can move left:
+                # TODO move robot left.
+            # TODO while robot can move right:
+                # TODO swap items.
+                # TODO move robot right.
+                # TODO compare items.
+                # TODO if comparison == 1:
+                    # TODO swap items.
+                    # TODO set did_swap to True.
+                # TODO move robot left.
+                # TODO swap items.
+                # TODO move robot right.
+            # TODO if did_swap is False:
+                # TODO set is_unsorted to False (sorting is done).
         pass
 
 
