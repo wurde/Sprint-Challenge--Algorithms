@@ -98,7 +98,10 @@ class SortingRobot:
 
     def sort(self):
         """
-        Sort the robot's list.
+        Sort the robot's list. Uses a bubble sort. The 
+        robot moves through each item comparing and 
+        swaping nearest items along the way. It does this
+        until the robot can make a pass without a single swap.
         """
 
         is_unsorted = True
