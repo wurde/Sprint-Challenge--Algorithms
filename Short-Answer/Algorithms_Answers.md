@@ -25,7 +25,7 @@ algo1(10)  #=> Count: 10
 algo1(100) #=> Count: 100
 ```
 
-b) This algorithm has a lineararithmic runtime complexit with O(n log n). Runtime complexity is shown to be between linear and polynomial.
+b) This algorithm has a lineararithmic runtime complexity with O(n log n). Runtime complexity is shown to be between linear and polynomial.
 
 ```python
 def algo2(n):
@@ -52,7 +52,53 @@ algo2(10)  #=> Count: 40
 algo2(100) #=> Count: 700
 ```
 
-c)
+c) This algorithm has a linear runtime complexity with O(n). Despite the actual runtime being n + 1 computers don't care much about adding one additional operation. Based on that we can remove the constant from the runtime complexity.
+
+```python
+def bunnyEars(bunnies, count):
+    count += 1
+    print(f"Count: {count}")
+    if bunnies == 0:
+        return 0
+
+    return 2 + bunnyEars(bunnies-1, count)
+
+bunnyEars(1, 0)
+#=> Count: 1
+#=> Count: 2
+
+bunnyEars(2, 0)
+#=> Count: 1
+#=> Count: 2
+#=> Count: 3
+
+bunnyEars(4, 0)
+#=> Count: 1
+#=> Count: 2
+#=> Count: 3
+#=> Count: 4
+
+bunnyEars(5, 0)
+#=> Count: 1
+#=> Count: 2
+#=> Count: 3
+#=> ...
+#=> Count: 6
+
+bunnyEars(10, 0)
+#=> Count: 1
+#=> Count: 2
+#=> Count: 3
+#=> ...
+#=> Count: 11
+
+bunnyEars(100, 0)
+#=> Count: 1
+#=> Count: 2
+#=> Count: 3
+#=> ...
+#=> Count: 101
+```
 
 ## Exercise II
 
