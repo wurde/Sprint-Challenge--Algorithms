@@ -7,3 +7,8 @@ def count_th(word):
     # TODO define base case
     # TODO define recursion
     pass
+
+if __name__ == '__main__':
+    word = "abcthxyz"
+    count = count_th(word)
+    print(f"word: '{word}, expected: 1, actual: {count}")
