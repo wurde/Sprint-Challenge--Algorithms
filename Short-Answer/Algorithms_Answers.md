@@ -102,4 +102,5 @@ bunnyEars(100, 0)
 
 ## Exercise II
 
-
+TODO describe solution via pseudocode.
+TODO describe runtime complexity.
