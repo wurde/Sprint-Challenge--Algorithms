@@ -102,5 +102,8 @@ bunnyEars(100, 0)
 
 ## Exercise II
 
-TODO describe solution via pseudocode.
-TODO describe runtime complexity.
+Use a binary search to minimize dropped+broken eggs. We use a binary search as it's more efficient than a linear search. Instead of going up floor by floor we divide and conquer.
+
+Start by finding the middpoint and separating floors into a `lower` and `higher` list. Check if egg breaks at the `middpoint floor`. If it does then repeat floor separation and midpoint check on the `higher floors` list. If the egg didn't break then repeat floor separation and middpoint check on the `lower floors`. Continue middpoint checks until the list is indivisible then return that floor.
+
+This algorithm has a `logarithmic time complexity` with `O(log n)`. It's better than an algorithm with a linear time complexity and worse than an algorithm with a constant time complexity.
