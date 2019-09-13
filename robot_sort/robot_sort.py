@@ -1,3 +1,7 @@
+# 
+# Define class
+# 
+
 class SortingRobot:
     def __init__(self, l):
         """
@@ -96,26 +100,35 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Bubble sort
-        # TODO set is_unsorted to True.
-        # TODO while is_unsorted is True continue sorting:
-            # TODO set did_swap to False.
-            # TODO while robot can move left:
-                # TODO move robot left.
-            # TODO while robot can move right:
-                # TODO swap items.
-                # TODO move robot right.
-                # TODO compare items.
-                # TODO if comparison == 1:
-                    # TODO swap items.
-                    # TODO set did_swap to True.
-                # TODO move robot left.
-                # TODO swap items.
-                # TODO move robot right.
-            # TODO if did_swap is False:
-                # TODO set is_unsorted to False (sorting is done).
-        pass
 
+        is_unsorted = True
+
+        while is_unsorted:
+            did_swap = False
+
+            while self.can_move_left():
+                self.move_left()
+
+            while self.can_move_right():
+                self.swap_item()
+                self.move_right()
+
+                comparison = self.compare_item()
+
+                if comparison == 1:
+                    self.swap_item()
+                    did_swap = True
+
+                self.move_left()
+                self.swap_item()
+                self.move_right()
+
+            if did_swap == False:
+                is_unsorted = False
+
+# 
+# Execute code
+# 
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
